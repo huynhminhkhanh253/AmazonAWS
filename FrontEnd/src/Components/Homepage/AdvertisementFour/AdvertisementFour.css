@@ -1,0 +1,26 @@
+.AdvertisementOne_main{
+    height: 420px;
+    width: 350px;
+    background: white;
+    margin: 15px;
+}
+.Advertisement_header{
+    font-size: 21px;
+    line-height: 27px;
+    font-weight: bold;
+    padding: 15px;
+}
+.Advertisement_body{
+    padding-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ad_fourImage{
+    padding-top: 11px;
+    width: 142px;
+    height: 100px;
+    margin: 5px;
+}
+.Advertisement_footer{
+    padding:15px;
+}

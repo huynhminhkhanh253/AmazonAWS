@@ -1,0 +1,103 @@
+.navbar_component{
+    width: 100vw;
+    height: 60px;
+    background-color: #131921;
+    display: flex;
+}
+.navbar_logo{
+    background: url('https://ik.imagekit.io/gyxs5vcin/sprite_350x.png?updatedAt=1683891908006') no-repeat -9px -50px;
+	width: 98px;
+	height: 31px;
+    margin: 15px;
+}
+.navbar_locator{
+    display: flex;
+    margin: 15px 0px;
+}
+.navbar_location{
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.navbar_locatorImage{
+    background: url('https://ik.imagekit.io/gyxs5vcin/sprite_350x.png?updatedAt=1683891908006') no-repeat -70px -305px;
+	width: 19px;
+	height: 22px;
+}
+.navbar_searchcomponent{
+    display: flex;
+    margin-left: 16px;
+}
+.navbar_searchbox{
+    height: 30px;
+    width: 792px;
+    margin-top: 10px;
+    display: flex;
+}
+.navbar_searchboxdiv{
+    background: #FEBD69;
+    height: 35.1px;
+    width: 40px;
+    border-radius: 0px 5px 5px 0px;
+    margin-top: 10.1px;
+    margin-left: -1.2px;;
+}
+.navbar_searchicon{
+    background: url('https://ik.imagekit.io/gyxs5vcin/sprite_350x.png?updatedAt=1683891908006') no-repeat -9px -289px;
+	width: 23px;
+	height: 23px;
+    margin-top: 7px;
+    margin-left: 8px;
+}
+.navbar_dropdown{
+    text-align-last: center;
+    width: 50px;
+    height: 35.2px;
+    margin-top: 10px;
+}
+.navbar_text{
+    color: white;
+}
+.navbar_signin{
+    width: 110px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.navbar_return{
+    margin-top: 10px;
+    margin-left:10px;
+}
+.navbar_cart{
+    display: flex;
+    margin-left: 20px;
+}
+.cart_image{
+    background: url('https://ik.imagekit.io/gyxs5vcin/sprite_350x.png?updatedAt=1683891908006') no-repeat -217px -336px;
+	width: 43px;
+	height: 30px;
+    margin-top: 10px;
+}
+.cart_text{
+    font-weight:bold;
+    margin-top: 20px;
+    margin-left:-10px;
+}
+.cart_item{
+    font-weight: bold;
+    position: relative;
+    left: -22px;
+    bottom: -5px;
+    color: #f08804;
+}
+.navbar_footer{
+    height: 39px;
+    width: 100vw;
+    background-color: #232F3E;
+    color: white;
+    display: flex;
+}
+.navbar_footer_text{
+    margin: 7.5px 10px 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
