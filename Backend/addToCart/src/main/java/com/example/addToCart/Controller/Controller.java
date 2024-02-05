@@ -3,6 +3,7 @@ package com.example.addToCart.Controller;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +16,7 @@ import com.example.addToCart.Entity.Cart;
 import com.example.addToCart.Entity.CartDetails;
 import com.example.addToCart.Service.CartService;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/amazon/addToCart")
 public class Controller {
@@ -29,7 +31,7 @@ public class Controller {
 	
 	@DeleteMapping("/remove")
 	public void removeFromCart(@RequestBody Cart cart) {
-		cartService.removeItemFromCartService(cart);
+		cartService.removeItemFromCartService(cart.productId);
 	}
 	
 	@GetMapping("/show/{userId}")

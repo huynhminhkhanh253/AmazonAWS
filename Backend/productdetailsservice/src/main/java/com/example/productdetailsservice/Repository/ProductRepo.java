@@ -14,4 +14,6 @@ public interface ProductRepo extends MongoRepository<Product, BigInteger>{
     Product save(Product product);
     ArrayList<Product> findAll();
     Product findByProductID(UUID productID);
+    
+    ArrayList<Product> findAllBysoldby(String soldby);
 }

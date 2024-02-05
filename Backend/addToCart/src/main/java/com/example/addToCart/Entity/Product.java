@@ -18,6 +18,7 @@ public class Product {
     public String name;
     public double price;
     public double rating;
-    public String imageURL;
+    public String image;
+    public String soldby;
 }
 

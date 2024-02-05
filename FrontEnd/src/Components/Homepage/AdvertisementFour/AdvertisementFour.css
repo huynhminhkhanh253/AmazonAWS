@@ -14,13 +14,21 @@
     padding-left: 15px;
     display: flex;
     flex-wrap: wrap;
+    
 }
 .ad_fourImage{
-    padding-top: 11px;
-    width: 142px;
-    height: 100px;
-    margin: 5px;
+    
+    width: 110px;
+    height: 120px;
+    margin-left: 24px !important;
+    margin: 12px;
+
 }
 .Advertisement_footer{
+    position: absolute;
+    bottom: -5px !important;
     padding:15px;
+    color: #007185;
+    font-weight: 499;
+    cursor: pointer;
 }

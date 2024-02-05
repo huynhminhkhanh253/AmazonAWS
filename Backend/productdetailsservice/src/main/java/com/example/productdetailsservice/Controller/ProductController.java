@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,8 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.productdetailsservice.Entity.Product;
 import com.example.productdetailsservice.Service.ProductService;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
+@CrossOrigin
 @RestController
 @RequestMapping("/amazon/products")
 
@@ -34,5 +37,16 @@ public class ProductController {
     public Product getProductById(@PathVariable UUID productID){
         return productService.getProductDetails(productID);
     }
+    @GetMapping("/getProductApple")
+    public ArrayList<Product> getAppleProduct(String soldby) {
+        soldby = "Apple";
+        return productService.findBrandProducts(soldby);
+    }
+    @GetMapping("/getProductSamsung")
+    public ArrayList<Product> getSamsungProduct(String soldby) {
+        soldby = "Samsung";
+        return productService.findBrandProducts(soldby);
+    }
+    
 
 }

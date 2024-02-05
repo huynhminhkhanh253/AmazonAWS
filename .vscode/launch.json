@@ -1,0 +1,35 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ProductdetailsserviceApplication<productdetailsservice>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.productdetailsservice.ProductdetailsserviceApplication",
+            "projectName": "productdetailsservice",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=49896 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=productdetailsservice"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-AddToCartApplication<addToCart>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.addToCart.AddToCartApplication",
+            "projectName": "addToCart",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-UsermetadataApplication<usermetadata>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.usermetadata.UsermetadataApplication",
+            "projectName": "usermetadata",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

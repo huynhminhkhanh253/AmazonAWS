@@ -8,10 +8,10 @@ function AdvertisementFour(props) {
             Up to 70% off | Electronics clearance store
             </div>
             <div className="Advertisement_body">
-                <img src="https://ik.imagekit.io/gyxs5vcin/V238940049_IN_PC_BAU_Edit_Creation_Laptops2X._SY608_CB667377204_.jpg?updatedAt=1683889905413" className="ad_fourImage" /> 
-                <img src="https://ik.imagekit.io/gyxs5vcin/V238940049_IN_PC_BAU_Edit_Creation_Laptops2X._SY608_CB667377204_.jpg?updatedAt=1683889905413" className="ad_fourImage" /> 
-                <img src="https://ik.imagekit.io/gyxs5vcin/V238940049_IN_PC_BAU_Edit_Creation_Laptops2X._SY608_CB667377204_.jpg?updatedAt=1683889905413" className="ad_fourImage" /> 
-                <img src="https://ik.imagekit.io/gyxs5vcin/V238940049_IN_PC_BAU_Edit_Creation_Laptops2X._SY608_CB667377204_.jpg?updatedAt=1683889905413" className="ad_fourImage" /> 
+                <img src={props.image1} className="ad_fourImage" /> 
+                <img src={props.image2} className="ad_fourImage" /> 
+                <img src={props.image3} className="ad_fourImage" /> 
+                <img src={props.image4} className="ad_fourImage" /> 
             </div>
             <div className="Advertisement_footer"> 
                 See more

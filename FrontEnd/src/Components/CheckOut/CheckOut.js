@@ -3,6 +3,8 @@ import "./Checkout.css";
 import Grid from '@material-ui/core/Grid';
 import CheckoutItems from './CheckoutItems';
 import {CartContext} from '../CartContext';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 
 function Checkout(props) {

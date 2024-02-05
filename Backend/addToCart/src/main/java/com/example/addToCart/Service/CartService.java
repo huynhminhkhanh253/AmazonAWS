@@ -22,8 +22,8 @@ public class CartService {
     public void addItemToCartSerivce(Cart cart){
         addToCartRepository.save(cart);
     }
-    public void removeItemFromCartService(Cart cart){
-        addToCartRepository.delete(cart);
+    public void removeItemFromCartService(UUID productId){
+        addToCartRepository.deleteByProductId(productId);
     }
     public CartDetails displayAllProducts(UUID userId){
         CartDetails cartDetails = new CartDetails();

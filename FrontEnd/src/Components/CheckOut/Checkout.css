@@ -19,3 +19,32 @@
     color: black;
     background-color: #FFD712;
 }
+.product__name{
+    font-size: 16px !important;
+    line-height: 24px !important;
+    font-weight: bold;
+    margin-top: 10px;
+}  
+.product__rating{
+    font-size: 14px;
+    color: #007185
+}
+.product__price{
+    position: absolute;
+    color:#0f1111;
+    font-size: 30px;
+    margin-left: 900px;
+    margin-top: 10px;
+    display: flex;
+}
+.delete{
+    margin-left: 185px;
+    margin-bottom: 20px;
+    margin-top: -50px;
+}
+.star{
+    color:#FFBF00;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+

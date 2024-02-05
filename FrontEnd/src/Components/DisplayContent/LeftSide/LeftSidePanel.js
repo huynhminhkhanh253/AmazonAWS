@@ -1,26 +1,50 @@
-import React from 'react';
+import React, { Children, createContext, useContext, useEffect, useState } from 'react';
 import "./LeftSide.css"
 
+
+
 function LeftSidePanel(props) {
-    return (
+    const [isSubscribed, setIsSubscribed] = useState(true);
+    const [isSubscribed2, setIsSubscribed2] = useState(true);
+    const handleChange = (event) => {
+        setIsSubscribed(current => !current)
+        props.getData(isSubscribed);
+        
+    };
+    const handleChange2 = (event) => {
+        setIsSubscribed2(current => !current)
+        props.getData2(isSubscribed2);
+    };
+
+    
+    useEffect(() => {
+        getData();
+       
+    });
+    const getData=()=>{
+        fetch("http://localhost:8082/amazon/products/getProductApple")
+            .then(respone => respone.json())
+            .then(data => {
+                
+            })
+            .catch(error=>{
+                
+            })
+    }
+    return ( 
         <div className="LeftSide_main">
             <div className="leftSide_header">
                 Brand
             </div>
             <div className="leftSide_brandName">
                 <label className="BrandName">
-                    <input type="checkbox" value="Apple"/>Apple
+                    <input value="Apple" onChange={handleChange} type="checkbox"/>Apple                    
                 </label>
                 <label className="BrandName">
-                    <input type="checkbox" value="Samsung"/>Samsung
+                    <input onChange={handleChange2} type="checkbox" value="Samsung"/>Samsung
                 </label>
-                <label className="BrandName">
-                    <input type="checkbox" value="MI"/>MI
-                </label>
-            </div>
-        </div>
-        
-
+            </div> 
+        </div> 
     );
 }
 

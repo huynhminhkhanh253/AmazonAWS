@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./NavBar.css"
 import { CartContext } from '../CartContext';
+import { Link } from 'react-router-dom';
 
 class NavBar extends Component {
     static contextType = CartContext;
@@ -14,7 +15,9 @@ class NavBar extends Component {
         return (
             <div>
                 <div className="navbar_component">
+                <Link to={"/"} >
                 <div className="navbar_logo"></div>
+                </Link>
                 <div className="navbar_locator">
                         <div className="navbar_locatorImage"></div>
                         <div className="navbar_location">

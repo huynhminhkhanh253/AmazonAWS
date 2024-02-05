@@ -25,4 +25,7 @@ public class ProductService {
     public Product getProductDetails(UUID productid){
         return productRepo.findByProductID(productid);
     }
+    public ArrayList<Product> findBrandProducts(String soldby){
+        return productRepo.findAllBysoldby(soldby);
+    }
 }
