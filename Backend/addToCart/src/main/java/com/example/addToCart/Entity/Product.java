@@ -14,6 +14,7 @@ public class Product {
     @Id
     @GeneratedValue
     public BigInteger id;
+    public long id2;
     public UUID productID;
     public String name;
     public double price;

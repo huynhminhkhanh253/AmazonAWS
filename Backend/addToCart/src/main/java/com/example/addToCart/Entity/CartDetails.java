@@ -8,6 +8,7 @@ import lombok.Setter;
 
 @Getter @Setter
 public class CartDetails {
+    private long id;
     private UUID userId;
     private ArrayList<Product> list;
 }

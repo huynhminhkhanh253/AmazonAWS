@@ -5,6 +5,24 @@ import StarIcon from '@mui/icons-material/Star';
 
 function CheckoutItems(props) {
     const handledelete = () =>{
+
+        let payload = {
+            "id" : props.definition.id2
+        }
+        const requestOptions = {
+            method: "DELETE",
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(payload),
+        }
+        fetch("http://localhost:8081/amazon/addToCart/remove", requestOptions)
+        .then(respone => respone.json())
+        .then(data => {
+            props.delete(); 
+            // window.location.reload();
+        })
+        .catch(error=>{  
+        })
+        props.delete();
         
     };
     return (
@@ -27,14 +45,14 @@ function CheckoutItems(props) {
 
                     
                 </div>
-                <div className="product__price">
+                <div className="product__price2">
                     <div style={{fontSize:"15px", marginTop:"8.5px"}} >$</div>
                     <div>{props.definition.price}</div>
                 </div>
                 
             </div>
             <div className='delete'>
-                <Button onChange={handledelete} size="small">Delete</Button>
+                <Button onClick={handledelete} size="small">Delete</Button>
                 
             </div>
             

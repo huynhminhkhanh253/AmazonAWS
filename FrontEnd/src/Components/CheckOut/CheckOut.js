@@ -8,13 +8,16 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 
 function Checkout(props) {
-    const {item,size,increment} = useContext(CartContext);
+    const {item,size,increment,getData} = useContext(CartContext);
     const cartValue = function(){
         let price = 0;
         for(let i = 0; i < item.length; i++){
             price+=parseInt(item[i].price);
         }
         return price;
+    }
+    const handledelete = () =>{
+        getData();
     }
     return (
         <div className="checkout__body">
@@ -25,7 +28,7 @@ function Checkout(props) {
                         <div style={{marginTop:"30px"}}> 
                             {
                                 item.map((value)=>(
-                                    <CheckoutItems definition = {value}/>
+                                    <CheckoutItems delete={handledelete} definition = {value}/>
                                     )
                                 )
 

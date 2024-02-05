@@ -16,6 +16,7 @@ import java.util.UUID;
 @Transactional
 public interface AddToCartRepository extends CrudRepository<Cart,Long> {
     Cart save(Cart cart);
-    void deleteByProductId(UUID productId);
+    void deleteById(long Id);
     ArrayList<Cart> findByUserId(UUID userId);
+    ArrayList<Cart> findAll();
 }

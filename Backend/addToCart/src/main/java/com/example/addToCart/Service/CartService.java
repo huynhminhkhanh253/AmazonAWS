@@ -19,11 +19,13 @@ public class CartService {
 
     @Autowired
     ProductDetailsProxy productDetailsProxy;
+
+
     public void addItemToCartSerivce(Cart cart){
         addToCartRepository.save(cart);
     }
-    public void removeItemFromCartService(UUID productId){
-        addToCartRepository.deleteByProductId(productId);
+    public void removeItemFromCartService(long id){
+        addToCartRepository.deleteById(id);
     }
     public CartDetails displayAllProducts(UUID userId){
         CartDetails cartDetails = new CartDetails();
@@ -33,10 +35,17 @@ public class CartService {
 
         for(int i = 0; i < cartlist.size(); i++){
             Product product = productDetailsProxy.getProductById(cartlist.get(i).getProductId());
+            product.setId2(cartlist.get(i).getId());
             productList.add(product);
         }
 
         cartDetails.setList(productList);
         return cartDetails;
+    }
+    public ArrayList<Cart> showAll(){
+        return addToCartRepository.findAll();
+    }
+    public ArrayList<Cart> showAllByUser(UUID userId){
+        return addToCartRepository.findByUserId(userId);
     }
 }

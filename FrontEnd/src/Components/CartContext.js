@@ -33,7 +33,7 @@ class CartContextProvider extends Component {
                     
                     // this.setState( { item: itemList } );
                     // this.setState( { size: this.state.item.list.length });
-                    this.getData();
+                    this.state.getData();
                     
                     // this.state.saveToLocalCache();
                 })
@@ -45,6 +45,17 @@ class CartContextProvider extends Component {
             saveToLocalCache: ()=>{
                 localStorage.setItem('myCart', JSON.stringify(this.state.item));
 
+            },
+            getData:()=>{
+                fetch("http://localhost:8081/amazon/addToCart/show/9b31316d-03d4-41bf-b779-72900a6aebfd")
+                    .then(respone => respone.json())
+                    .then(json => {
+                        this.setState( { size: json.list.length });
+                        this.setState({item : json.list })
+                    })
+                    .catch(error=>{
+                        
+                    })
             },
             // cartreturn: () =>{
             //     let list = [];
@@ -62,24 +73,24 @@ class CartContextProvider extends Component {
          
     }
     
-    getData=()=>{
-        fetch("http://localhost:8081/amazon/addToCart/show/9b31316d-03d4-41bf-b779-72900a6aebfd")
-            .then(respone => respone.json())
-            .then(json => {
-                this.setState( { size: json.list.length });
-                this.setState({item : json.list })
-            })
-            .catch(error=>{
+    // getData=()=>{
+    //     fetch("http://localhost:8081/amazon/addToCart/show/9b31316d-03d4-41bf-b779-72900a6aebfd")
+    //         .then(respone => respone.json())
+    //         .then(json => {
+    //             this.setState( { size: json.list.length });
+    //             this.setState({item : json.list })
+    //         })
+    //         .catch(error=>{
                 
-            })
-    }
+    //         })
+    // }
     componentDidMount() {
-        this.getData();
+        this.state.getData();
     }
 
     render() { 
         return ( 
-            <CartContext.Provider value={{ ...this.state,...this.increment }} >
+            <CartContext.Provider value={{ ...this.state,...this.increment,...this.getData}} >
                 {this.props.children}
             </CartContext.Provider>
          );

@@ -3,6 +3,7 @@
     width: 80vw;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 .product{
     width: 250px;
