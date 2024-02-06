@@ -82,7 +82,7 @@ function RightSidePanel(props) {
                 props.istick == true && props.istick2 == false ?
                 listOfProductApple.map(
                     (item)=>(
-                        <Link to={"/order/" + item.productID} >
+                        <Link style={{textDecoration:"none", color:"inherit"}} to={"/order/" + item.productID} >
                             <Product definition = {item} />
                         </Link>
                     )
@@ -90,7 +90,7 @@ function RightSidePanel(props) {
                 : props.istick2 == true && props.istick == false ?
                 listOfProductSamsung.map(
                     (item)=>(
-                        <Link to={"/order/" + item.productID} >
+                        <Link style={{textDecoration:"none", color:"inherit"}} to={"/order/" + item.productID} >
                             <Product definition = {item} />
                         </Link>
                     )
@@ -98,7 +98,7 @@ function RightSidePanel(props) {
                 : 
                 listOfProduct.map(
                     (item)=>(
-                        <Link to={"/order/" + item.productID} >
+                        <Link style={{textDecoration:"none", color:"inherit"}} to={"/order/" + item.productID} >
                             <Product definition = {item} />
                         </Link>
                     )

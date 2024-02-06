@@ -2,6 +2,7 @@ import React from 'react';
 import "./Checkout.css";
 import Button from '@mui/material/Button';
 import StarIcon from '@mui/icons-material/Star';
+import Rating from '@material-ui/lab/Rating';
 
 function CheckoutItems(props) {
     const handledelete = () =>{
@@ -39,14 +40,15 @@ function CheckoutItems(props) {
                     </div>
                     <div style={{display:"flex", marginTop:"30px"}}>
                         <div style={{fontWeight:"bold"}}>Rating</div>
-                        <StarIcon className='star' fontSize="inherit" />
+                        <Rating name="read-only" value={props.definition.rating} readOnly  style={{ fontSize: "20px", marginTop:"2px"}}/>
                         <div style={{marginTop:"2px", marginLeft:"5px"}}>{props.definition.rating}</div>
                     </div>
 
                     
                 </div>
                 <div className="product__price2">
-                    <div style={{fontSize:"15px", marginTop:"8.5px"}} >$</div>
+                    <div style={{marginTop:"10px", fontSize:"20px", fontWeight:"bold"}}>Price</div>
+                    <div style={{marginLeft:"10px", fontSize:"15px", marginTop:"8.5px"}} >$</div>
                     <div>{props.definition.price}</div>
                 </div>
                 

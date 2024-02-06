@@ -173,13 +173,16 @@ function PlaceOrder(props) {
                     <div className="placeholder__description">
                         <div style={{fontSize:"24px", lineHeight:"32px", fontWeight: 500}}> {productDetails.name} </div>
                         <div>
-                            <Rating name="read-only" value="3" readOnly  style={{ fontSize: "20px"}}/>
-                            {productDetails.ratings} ratings |
+                            <Rating name="read-only" value={productDetails.rating} readOnly  style={{ fontSize: "20px"}}/>
+                            {productDetails.rating} ratings |
                             {productDetails.review}+ answered questions
                         </div>
                         <hr></hr>
                         <div>
-                            <div className="textgap">Price:	<span className="pricetag"> {productDetails.price}</span></div>
+                            
+                            <div style={{display:'flex'}} className="textgap">Price: <div style={{marginLeft:"10px", fontSize:"15px", marginTop:"-1px"}} >$</div>	<span style={{fontSize:"22px", marginTop:"-5px"}}> {productDetails.price}</span>
+                            
+                            </div>
                             <div className="textgap">FREE delivery: <strong>{productDetails.delivery}</strong></div>
                             <div className="textgap">EMI starts at  {productDetails.emi}. No Cost EMI available</div>
                             <div style={{ color: "#007600", fontSize: "20px"}} className="textgap">{productDetails.status}</div>
