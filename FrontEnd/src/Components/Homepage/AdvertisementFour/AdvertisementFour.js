@@ -5,7 +5,7 @@ function AdvertisementFour(props) {
     return (
         <div className="AdvertisementOne_main">
             <div className="Advertisement_header">
-            Up to 70% off | Electronics clearance store
+            {props.header}
             </div>
             <div className="Advertisement_body">
                 <img src={props.image1} className="ad_fourImage" /> 
