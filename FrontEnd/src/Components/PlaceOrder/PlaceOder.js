@@ -1,20 +1,21 @@
 import React,{ useContext, useEffect, useState }  from 'react';
 import "./PlaceOrder.css";
 import Grid from '@material-ui/core/Grid';
-import Rating from '@material-ui/lab/Rating';
 import Paper from '@material-ui/core/Paper';
 import { Link } from 'react-router-dom';
 import {CartContext} from '../CartContext';
 import { useParams } from "react-router-dom";
+import star from '../../star.png';
 
 function PlaceOrder(props) {
 
     const {item,size,increment} = useContext(CartContext);
     const [productDetails,setProductDetails] = useState([]);
+    
 
     let { id } = useParams();
     
-
+    
     const addTOCart = function() {
         increment(productDetails, id);     
     }
@@ -173,8 +174,7 @@ function PlaceOrder(props) {
                     <div className="placeholder__description">
                         <div style={{fontSize:"24px", lineHeight:"32px", fontWeight: 500}}> {productDetails.name} </div>
                         <div>
-                            <Rating name="read-only" value={productDetails.rating} readOnly  style={{ fontSize: "20px"}}/>
-                            {productDetails.rating} ratings |
+                            <span style={{fontWeight:"100px"}}>ratings</span> : {productDetails.rating} <img style={{width:"17px"}} src={star}/> | 
                             {productDetails.review}+ answered questions
                         </div>
                         <hr></hr>

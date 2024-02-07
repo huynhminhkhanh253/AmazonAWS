@@ -12,7 +12,7 @@ function Checkout(props) {
     const cartValue = function(){
         let price = 0;
         for(let i = 0; i < item.length; i++){
-            price+=parseInt(item[i].price);
+            price+=item[i].price;
         }
         return price;
     }
@@ -39,8 +39,12 @@ function Checkout(props) {
                     </div>
                  </Grid>
                  <Grid item={2}>
-                    <div style={{ width: "290px", padding: "20px", marginTop: "15px", backgroundColor: "white"}}>
-                        <div style={{fontSize: "26px"}}>Subtotal ( {size} items) : <strong>{ cartValue() }</strong></div>
+                    <div style={{ width: "300px", padding: "20px", marginTop: "15px", backgroundColor: "white"}}>
+                        <div style={{display: "flex"}}>            
+                            <div style={{fontSize: "25px"}}>Subtotal ( {size} items) : <strong>{ cartValue() }</strong></div>
+                            <div style={{marginLeft:"5px", fontSize:"20px", marginTop:"5px"}} >$</div>
+                        </div>
+                        
                         <div style={{marginTop:"10px"}}>
                             <label>
                                 <input type="checkbox" />This order contains a gift
