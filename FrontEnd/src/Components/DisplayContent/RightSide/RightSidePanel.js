@@ -14,7 +14,7 @@ function RightSidePanel(props) {
  
     const getData2=()=>{
 
-        fetch("http://localhost:8082/amazon/products/getProductApple")
+        fetch("http://amazonproductdetails-1304216633.ap-southeast-1.elb.amazonaws.com/amazon/products/getProductApple")
         .then(respone => respone.json())
         .then(list => {
             setListOfProductsApple(list);
@@ -26,7 +26,7 @@ function RightSidePanel(props) {
 
     const getData3=()=>{
 
-        fetch("http://localhost:8082/amazon/products/getProductSamsung")
+        fetch("http://amazonproductdetails-1304216633.ap-southeast-1.elb.amazonaws.com/amazon/products/getProductSamsung")
         .then(respone => respone.json())
         .then(list => {
             setListOfProductsSamsubg(list);
@@ -37,7 +37,7 @@ function RightSidePanel(props) {
     }
 
     const getData=()=>{
-        fetch("http://localhost:8082/amazon/products/getAllProducts")
+        fetch("http://amazonproductdetails-1304216633.ap-southeast-1.elb.amazonaws.com/amazon/products/getAllProducts")
         .then(respone => respone.json())
         .then(list => {
             setListOfProducts(list);

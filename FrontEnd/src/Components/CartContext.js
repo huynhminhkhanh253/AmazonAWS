@@ -26,7 +26,7 @@ class CartContextProvider extends Component {
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify(payload),
                 }
-                fetch("http://localhost:8081/amazon/addToCart/add", requestOptions)
+                fetch("http://amazonaddtocart-154744654.ap-southeast-1.elb.amazonaws.com/amazon/addToCart/add", requestOptions)
                 .then()
                 .then(data => {
                     // this.setState({item : this.state.cartreturn()});
@@ -47,7 +47,7 @@ class CartContextProvider extends Component {
 
             },
             getData:()=>{
-                fetch("http://localhost:8081/amazon/addToCart/show/9b31316d-03d4-41bf-b779-72900a6aebfd")
+                fetch("http://amazonaddtocart-154744654.ap-southeast-1.elb.amazonaws.com/amazon/addToCart/show/9b31316d-03d4-41bf-b779-72900a6aebfd")
                     .then(respone => respone.json())
                     .then(json => {
                         this.setState( { size: json.list.length });
@@ -59,7 +59,7 @@ class CartContextProvider extends Component {
             },
             // cartreturn: () =>{
             //     let list = [];
-            //     fetch("http://localhost:8081/amazon/addToCart/show/9b31316d-03d4-41bf-b779-72900a6aebfd", {method:"GET"})
+            //     fetch("http://amazonaddtocart-154744654.ap-southeast-1.elb.amazonaws.com/amazon/addToCart/show/9b31316d-03d4-41bf-b779-72900a6aebfd", {method:"GET"})
             //     .then(respone => respone.json())
             //     .then(data => {
             //         list = data.list;
@@ -74,7 +74,7 @@ class CartContextProvider extends Component {
     }
     
     // getData=()=>{
-    //     fetch("http://localhost:8081/amazon/addToCart/show/9b31316d-03d4-41bf-b779-72900a6aebfd")
+    //     fetch("http://amazonaddtocart-154744654.ap-southeast-1.elb.amazonaws.com/amazon/addToCart/show/9b31316d-03d4-41bf-b779-72900a6aebfd")
     //         .then(respone => respone.json())
     //         .then(json => {
     //             this.setState( { size: json.list.length });

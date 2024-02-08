@@ -154,7 +154,7 @@ function PlaceOrder(props) {
 
     const getData=()=>{
         
-        fetch("http://localhost:8082/amazon/products/search/" + id)
+        fetch("http://amazonproductdetails-1304216633.ap-southeast-1.elb.amazonaws.com/amazon/products/search/" + id)
         .then(respone => respone.json())
         .then(data => {
             setProductDetails(data);

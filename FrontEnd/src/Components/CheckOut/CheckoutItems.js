@@ -15,7 +15,7 @@ function CheckoutItems(props) {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(payload),
         }
-        fetch("http://localhost:8081/amazon/addToCart/remove", requestOptions)
+        fetch("http://amazonaddtocart-154744654.ap-southeast-1.elb.amazonaws.com/amazon/addToCart/remove", requestOptions)
         .then(respone => respone.json())
         .then(data => {
             props.delete(); 
