@@ -41,8 +41,8 @@ function Checkout(props) {
                  <Grid item={2}>
                     <div style={{ width: "300px", padding: "20px", marginTop: "15px", backgroundColor: "white"}}>
                         <div style={{display: "flex"}}>            
-                            <div style={{fontSize: "25px"}}>Subtotal ( {size} items) : <strong>{ cartValue() }</strong></div>
-                            <div style={{marginLeft:"5px", fontSize:"20px", marginTop:"5px"}} >$</div>
+                            <div style={{fontSize: "22px"}}>Subtotal ({size} items) : <strong>{ cartValue() }</strong></div>
+                            <div style={{marginLeft:"5px", fontSize:"20px", marginTop:"1px"}} >$</div>
                         </div>
                         
                         <div style={{marginTop:"10px"}}>

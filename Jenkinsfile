@@ -10,7 +10,7 @@ pipeline {
                 }
             }
         }
-        stage('Backend build') {
+        stage('AddToCart Api build') {
             tools{
                 maven 'maven_3_9_1'
             }
@@ -20,8 +20,13 @@ pipeline {
                     bat 'mvn clean install'
                 }
             }
+        }
+        stage('ProductDetails Api build') {
+            tools{
+                maven 'maven_3_9_1'
+            }
             steps {
-                echo 'building productdetails springboot'
+                echo 'building ProducDetails springboot'
                 dir("Backend/productdetailsservice") {
                     bat 'mvn clean install'
                 }

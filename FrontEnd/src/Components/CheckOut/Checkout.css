@@ -1,11 +1,13 @@
 .checkout__body {
     background-color: #EAEDED;
     height: 100vh;
+    position: relative;
 }
 .checkout__container {
     background-color: white;
     margin: 15px;
     width: 73vw;
+    position:relative;
 }
 .textgap {
     margin: 5px;
@@ -24,7 +26,14 @@
     line-height: 24px !important;
     font-weight: bold;
     margin-top: 10px;
-}  
+}
+.product__name2{
+    font-size: 16px !important;
+    line-height: 24px !important;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 400px;
+} 
 .product__rating{
     font-size: 14px;
     color: #007185
@@ -38,9 +47,11 @@
     display: flex;
 }
 .delete{
-    margin-left: 185px;
+    /* margin-left: -100px;
     margin-bottom: 20px;
-    margin-top: -50px;
+    margin-top: -50px; */
+    margin-top: 10px;
+    margin-left: -10px;
 }
 .star{
     color:#FFBF00;

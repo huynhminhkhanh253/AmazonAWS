@@ -33,8 +33,8 @@ function CheckoutItems(props) {
                     <img src={props.definition.image} height="200px" />
                 </div>
                 <div style={{ marginTop: "20px"}}>
-                    <div style={{fontSize: "20px"}} className="product__name">{props.definition.name}</div> 
-                    <div style={{display:"flex", marginTop:"50px"}}>
+                    <div style={{fontSize: "20px"}} className="product__name2">{props.definition.name}</div> 
+                    <div style={{display:"flex", marginTop:"30px"}}>
                         <div style={{fontWeight:"bold"}}>Sold by</div>
                         <div style={{marginTop:"1px", marginLeft:"10px"}}>{props.definition.soldby}</div>
                     </div>
@@ -42,6 +42,9 @@ function CheckoutItems(props) {
                         <div style={{fontWeight:"bold"}}>Rating</div>
                         <Rating name="read-only" value={props.definition.rating} readOnly  style={{ fontSize: "20px", marginTop:"2px"}}/>
                         <div style={{marginTop:"2px", marginLeft:"5px"}}>{props.definition.rating}</div>
+                    </div>
+                    <div className='delete'>
+                        <Button onClick={handledelete} size="small">Delete</Button>            
                     </div>
 
                     
@@ -53,10 +56,7 @@ function CheckoutItems(props) {
                 </div>
                 
             </div>
-            <div className='delete'>
-                <Button onClick={handledelete} size="small">Delete</Button>
-                
-            </div>
+            
             
         </div>
     );
