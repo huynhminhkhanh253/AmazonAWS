@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.example.addToCart.Entity.Product;
 
-@FeignClient(name="product-details", url="http://amazonproductdetails-1304216633.ap-southeast-1.elb.amazonaws.com")
+@FeignClient(name="product-details", url="http://localhost:8082")
 
 
 public interface ProductDetailsProxy {
