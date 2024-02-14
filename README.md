@@ -10,7 +10,7 @@ http://amazonfrontend.s3-website-ap-southeast-1.amazonaws.com/
 ![alt text](/FrontEnd/Image_Upload/HLD.png)
 ## Database Schema
 <div align="center">
-<img src="/FrontEnd/Image_Upload/Database.png" width="200" />
+<img src="/FrontEnd/Image_Upload/Database.png" width="400" />
 </div>
 
 ## Project Overview
